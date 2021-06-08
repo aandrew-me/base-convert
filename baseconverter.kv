@@ -1,0 +1,110 @@
+WindowManager:
+    FirstWindow:
+
+<FirstWindow>:
+    decimal: decimal
+    binary: binary
+    octal: octal
+    hex: hex
+    name: 'first'
+    BoxLayout:
+        decimal: decimal
+        binary: binary
+        octal: octal
+        hex: hex
+
+        orientation: "vertical"
+
+        canvas:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: "bg.jpg"
+
+        Label:
+            size_hint: 1, .5
+            text: 'Decimal'
+            font_name: 'myfont.otf'
+        TextInput:
+            id: decimal
+            size_hint: .80, None
+            height: "35dp"
+            pos_hint: {"x": .10}
+            text:
+            multiline: False
+            font_size: "19dp"
+
+        Label:
+            size_hint: 1, None
+            height: '45dp'
+
+        Label:
+            text: 'Binary'
+            size_hint: 1, .5
+            font_name: 'myfont.otf'
+        TextInput:
+            id: binary
+            size_hint: .80, None
+            height: "35dp"
+            pos_hint: {"x": .10}
+            text:
+            multiline: False
+            font_size: "19dp"
+        Label:
+            size_hint: 1, None
+            height: '45dp'
+
+
+        Label:
+            size_hint: 1, .5
+            text: 'Octal'
+            font_name: 'myfont.otf'
+        TextInput:
+            id: octal
+            size_hint: .80, None
+            height: "35dp"
+            pos_hint: {"x": .10}
+            text:
+            multiline: False
+            font_size: "19dp"
+        Label:
+            size_hint: 1, None
+            height: '45dp'
+
+        Label:
+            text: 'Hexadecimal'
+            size_hint: 1, .5
+            font_name: 'myfont.otf'
+        TextInput:
+            id: hex
+            size_hint: .80, None
+            height: "35dp"
+            pos_hint: {"x": .10}
+            text:
+            multiline: False
+            font_size: "19dp"
+
+
+        BoxLayout:
+            name: 'second'
+            spacing: '10dp'
+            padding: '20dp'
+
+            Button:
+                on_press: root.reset()
+                text: 'Clear'
+                font_name: "myfont.otf"
+                background_color: 1, 1, 1, .65
+                size_hint: .2, None
+                height: '40dp'
+            Button:
+                on_press: root.conversion()
+                text: 'Convert'
+                font_name: "myfont.otf"
+                background_color: 1, 1, 1, .65
+                size_hint: .2, None
+                height: '40dp'
+        Label:
+            size_hint: 1, None
+            height: '15dp'
+
